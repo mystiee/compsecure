@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
+    <link rel="icon" href="images/logobialemale.png">
+    <title>CompSecure</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+        <div id="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu1">
+            <ul>
+                <li>
+                    <a href="index.html">Strona główna</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="cennik.html">Cennik</a>
+                    <div class="dropdown-content">
+                        <a href="cennik.html#cenniktytkomp1">Serwis Komputera</a>
+                        <a href="cennik.html#cenniktytlaptop1">Serwis Lapotpa</a>
+                        <a href="cennik.html#cenniktytmonitoring1">Monitoring</a>
+                    </div>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="onas.html">O nas</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu">
+            <div id="mobile-hamburger" onclick="toggleMobileMenu()">&#9776;</div>
+            <nav id="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li id="li1"><a href="cennik.html">Cennik</a></li>
+                    <li id="li1"><a href="kontakt.html">Kontakt</a></li>
+                    <li id="li1"><a href="onas.html">O nas</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-nav');
+            menu.classList.toggle('open');
+        }
+        </script>
+    </header>
+    <section id="glowna">
+        <section id="kontaktcontainer">
+            <div id="kontaktdane">
+                <p id="kontaktdanetyt">Kontakt:</p>
+                <p id="kontaktdane1">tel. : 502 138 081</p>
+                <p id="kontaktdane1">E-mail : kacper.kaminski@compsecure.pl</p>
+            </div>
+            <div id="kontaktgodz">
+                <p id="kontaktdanetyt">Godziny otwarcia:</p>
+                <p id="kontaktdane1">Poniedziałek - Piątek</p>
+                <p id="kontaktdane1">9:00 - 15:00</p>
+            </div>
+        </section>
+        <form id="contactForm" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSeZZQRLc4Q7bLiTpYRDIwECYJjh7seFQp4KR9AyzHtifClfNA/formResponse">
+            <p id="contactFormHeader">Skontaktuj się z nami bezpośrednio</p>
+            <input type="text" id="contactFormName" name="entry.1139382519" placeholder="Wprowadź swoje imię" required>
+            <input type="email" id="contactFormEmail" name="entry.1953424156" placeholder="Podaj adres Email" required>
+            <textarea id="contactFormMessage" name="entry.968951639" placeholder="Napisz wiadomość" required></textarea>
+            <button type="submit" id="contactFormSubmit">Wyślij</button>
+        </form>
+        <div id="popupOverlay" style="display: none;"></div>
+        <div id="popupMessage" style="display: none;">
+            <div id="popupContent">
+                <span id="popupClose">&times;</span>
+                <div id="popupText"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer1container">
+            <div id="footer11">
+                <p id="f1tyt">Informacje</p>
+                <ul>
+                    <li><a id="footer11ahref" href="regulamin.html">Regulamin</a></li>
+                    <li><a id="footer11ahref" href="polityka.html">Polityka Prywatności</a></li>
+                </ul>  
+            </div>
+            <div id="footer12">
+                <p id="f1tyt">Kontakt</p>
+                <ul>
+                    <li><p id="footer11p">tel. : 502 138 081</p></li>
+                    <li><p id="footer11p">E-mail : kacper.kaminski@compsecure.pl</p></li>
+                </ul>
+            </div>
+            <div id="footer13">
+                <p id="f1tyt">Godziny Otrwarcia</p>
+                <p >Poniedziałek - Piątek 9:00 - 15:00</p>
+            </div>
+        </div>
+        <div id="liniafooter"></div>
+        <div class="footer2container">
+            <div>
+                <a href="index.html"><img id="logofooter" src="images/logobiale.png" alt="logo"></a>
+            </div>
+            <div id="copyrightfooter">
+                <p>Copyright © 2024 CompSecure.pl</p>
+            </div>
+            <div id="socialfooter">
+                <a href="https://www.facebook.com/CompAndSecure/"><img id="fb" src="images/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/comp.secure/"><img id="insta" src="images/insta.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <button id="backToTop" onclick="scrollToTop()"><img id="backtoup" src="images/backtoup.png" alt="backToTop"></button>
+    <script src="script.js"></script>
+</body>
+</html>
