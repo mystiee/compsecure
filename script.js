@@ -230,19 +230,16 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     const formData = new FormData(this); // Pobiera dane formularza
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'send_email.php', true);
+    xhr.open('POST', 'https://docs.google.com/forms/d/e/1FAIpQLSeZZQRLc4Q7bLiTpYRDIwECYJjh7seFQp4KR9AyzHtifClfNA/formResponse', true);
+    xhr.setRequestHeader('Accept', '*/*');
 
     xhr.onload = function() {
         const popupOverlay = document.getElementById('popupOverlay');
         const popupMessage = document.getElementById('popupMessage');
         const popupText = document.getElementById('popupText');
         
-        if (xhr.status === 200) {
-            popupText.innerHTML = '<p style="color: green;">Wiadomość została wysłana.</p>';
-        } else {
-            popupText.innerHTML = '<p style="color: red;">Błąd podczas wysyłania wiadomości.</p>';
-        }
-
+        // ZAWSZE zakładamy, że wysłano (Google nie zwraca poprawnego statusu)
+        popupText.innerHTML = '<p style="color: green;">Wiadomość została wysłana.</p>';
         popupOverlay.style.display = 'flex';
         popupMessage.style.display = 'flex';
     };
@@ -253,7 +250,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         const popupText = document.getElementById('popupText');
         
         popupText.innerHTML = '<p style="color: red;">Błąd podczas nawiązywania połączenia.</p>';
-
         popupOverlay.style.display = 'flex';
         popupMessage.style.display = 'flex';
     };
