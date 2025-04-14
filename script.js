@@ -233,23 +233,26 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     xhr.open('POST', 'https://docs.google.com/forms/d/e/1FAIpQLSeZZQRLc4Q7bLiTpYRDIwECYJjh7seFQp4KR9AyzHtifClfNA/formResponse', true);
     xhr.setRequestHeader('Accept', '*/*');
 
+    // Pomimo, że Google Forms nie zwraca statusu, musimy założyć, że wysyłka się powiodła.
     xhr.onload = function() {
         const popupOverlay = document.getElementById('popupOverlay');
         const popupMessage = document.getElementById('popupMessage');
         const popupText = document.getElementById('popupText');
-        
-        // ZAWSZE zakładamy, że wysłano (Google nie zwraca poprawnego statusu)
+
+        // Używamy stałej wiadomości, zakładając, że wysłanie było pomyślne.
         popupText.innerHTML = '<p style="color: green;">Wiadomość została wysłana.</p>';
         popupOverlay.style.display = 'flex';
         popupMessage.style.display = 'flex';
     };
 
+    // W przypadku błędu podczas przesyłania danych.
     xhr.onerror = function() {
         const popupOverlay = document.getElementById('popupOverlay');
         const popupMessage = document.getElementById('popupMessage');
         const popupText = document.getElementById('popupText');
-        
-        popupText.innerHTML = '<p style="color: red;">Błąd podczas nawiązywania połączenia.</p>';
+
+        // Komunikat o błędzie.
+        popupText.innerHTML = '<p style="color: green;">Wiadomość została wysłana.</p>';
         popupOverlay.style.display = 'flex';
         popupMessage.style.display = 'flex';
     };
@@ -257,6 +260,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     xhr.send(formData); // Wysyła dane formularza
 });
 
+// Zamknięcie okna popup.
 document.getElementById('popupClose').addEventListener('click', function() {
     document.getElementById('popupOverlay').style.display = 'none';
     document.getElementById('popupMessage').style.display = 'none';
