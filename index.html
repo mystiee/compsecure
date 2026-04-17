@@ -1,174 +1,227 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
-    <link rel="icon" href="images/logobialemale.png">
-    <title>CompSecure</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CompSecure – Serwis Komputerowy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
-        <div id="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <nav id="menu1">
-            <ul>
-                <li>
-                    <a href="index.html">Strona główna</a>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn" href="cennik.html">Cennik</a>
-                    <div class="dropdown-content">
-                        <a href="cennik.html#cenniktytkomp1">Serwis Komputera</a>
-                        <a href="cennik.html#cenniktytlaptop1">Serwis Lapotpa</a>
-                        <a href="cennik.html#cenniktytmonitoring1">Monitoring</a>
-                    </div>
-                </li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="onas.html">O nas</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu">
-            <div id="mobile-hamburger" onclick="toggleMobileMenu()">&#9776;</div>
-            <nav id="mobile-nav">
-                <ul>
-                    <li><a href="index.html">Strona główna</a></li>
-                    <li id="li1"><a href="cennik.html">Cennik</a></li>
-                    <li id="li1"><a href="kontakt.html">Kontakt</a></li>
-                    <li id="li1"><a href="onas.html">O nas</a></li>
-                </ul>
-            </nav>
+
+<nav>
+  <a class="nav-logo" href="index.html"><span>Comp</span>Secure</a>
+  <ul class="nav-links">
+    <li><a href="#about">O nas</a></li>
+    <li><a href="#pricing">Cennik</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Przełącz tryb">🌙</button>
+    <a href="index.html#contact" class="nav-cta">Napisz do nas</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Serwis IT · Monitoring · Smart Dom</div>
+    <h1>Twój zaufany<br/><em>serwis</em><br/>komputerowy</h1>
+    <p>Naprawiamy komputery i laptopy, instalujemy systemy monitoringu i inteligentnego domu. Konkurencyjne ceny, wysoka jakość.</p>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-primary">Zobacz cennik</a>
+      <a href="#contact" class="btn-ghost">Kontakt</a>
+    </div>
+    <div class="hero-icons">
+      <div class="hero-icon-item">🖥️ Serwis IT</div>
+      <div class="hero-icon-item">📷 Monitoring</div>
+      <div class="hero-icon-item">🏠 Smart Dom</div>
+      <div class="hero-icon-item">✅ Przegląd GRATIS</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 class="section-title">Kompleksowe rozwiązania IT i systemy zabezpieczeń</h2>
+      <p>Oferujemy profesjonalne usługi IT i systemów zabezpieczeń, stawiając na wysoką jakość wykonania oraz indywidualne podejście do każdego klienta.</p>
+      <p>Specjalizujemy się w naprawach komputerów i laptopów, a także w instalacji i konfiguracji systemów monitoringu oraz rozwiązań inteligentnego domu.</p>
+      <p>Każde zlecenie realizujemy rzetelnie, dbając o skuteczność działania oraz dopasowanie rozwiązań do potrzeb użytkownika.</p>
+      <div class="tag-list">
+        <span class="tag">Serwis komputerów</span>
+        <span class="tag">Serwis laptopów</span>
+        <span class="tag">Monitoring CCTV</span>
+        <span class="tag">Smart Dom</span>
+        <span class="tag">Instalacja systemu</span>
+        <span class="tag">Tworzenie stron</span>
+      </div>
+    </div>
+    <div class="about-cards">
+      <div class="about-card">
+        <h3>🔧 Serwis IT</h3>
+        <p>Naprawiamy komputery i laptopy szybko i skutecznie. Nasz zespół jest gotowy pomóc w rozwiązaniu Twoich problemów technicznych.</p>
+      </div>
+      <div class="about-card">
+        <h3>📷 Monitoring</h3>
+        <p>Dostarczamy profesjonalne systemy nadzoru dostosowane do Twoich potrzeb. Chroń swój dom i firmę przed niepowołanymi osobami.</p>
+      </div>
+      <div class="about-card">
+        <h3>🏠 Inteligentny Dom</h3>
+        <p>Instalacja i konfiguracja podstawowych rozwiązań smart home, takich jak inteligentne żarówki, gniazdka oraz proste systemy sterowania urządzeniami. Dzięki temu Twój dom staje się wygodniejszy i bardziej funkcjonalny.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 class="section-title">Cennik</h2>
+  <p class="section-sub">Przegląd techniczny zawsze gratis. Ostateczna wycena po diagnostyce.</p>
+  <div class="pricing-tabs">
+    <button class="tab-btn active" onclick="showTab('komputer', this)">🖥️ Serwis Komputera</button>
+    <button class="tab-btn" onclick="showTab('laptop', this)">💻 Serwis Laptopa</button>
+    <button class="tab-btn" onclick="showTab('monitoring', this)">📷 Monitoring</button>
+  </div>
+
+  <div class="pricing-table-wrap active" id="tab-komputer">
+    <table>
+      <thead><tr><th>Usługa</th><th>Cena</th></tr></thead>
+      <tbody>
+        <tr><td>Przegląd techniczny</td><td><span class="free-badge">GRATIS</span></td></tr>
+        <tr><td>Czyszczenie komputera</td><td>50 – 150 zł</td></tr>
+        <tr><td>Złożenie komputera</td><td>150 zł</td></tr>
+        <tr><td>Wymiana procesora</td><td>80 zł</td></tr>
+        <tr><td>Wymiana zasilacza</td><td>80 zł</td></tr>
+        <tr><td>Wymiana karty graficznej</td><td>50 zł</td></tr>
+        <tr><td>Wymiana / dodanie pamięci RAM</td><td>20 zł</td></tr>
+        <tr><td>Wymiana / dodanie karty rozszerzeń</td><td>20 zł</td></tr>
+        <tr><td>Wymiana / dodanie dysku</td><td>30 zł</td></tr>
+        <tr><td>Wymiana baterii CMOS (BIOS)</td><td>20 zł</td></tr>
+        <tr><td>Wymiana układu chłodzenia</td><td>50 zł</td></tr>
+        <tr><td>Przełożenie podzespołów do nowej obudowy</td><td>150 zł</td></tr>
+        <tr><td>Instalacja czystego systemu Windows</td><td>50 zł</td></tr>
+        <tr><td>Inne usługi</td><td>Wycena indywidualna</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pricing-table-wrap" id="tab-laptop">
+    <table>
+      <thead><tr><th>Usługa</th><th>Cena</th></tr></thead>
+      <tbody>
+        <tr><td>Przegląd techniczny</td><td><span class="free-badge">GRATIS</span></td></tr>
+        <tr><td>Czyszczenie laptopa</td><td>od 150 zł</td></tr>
+        <tr><td>Wymiana / dodanie pamięci RAM</td><td>100 zł</td></tr>
+        <tr><td>Wymiana / dodanie dysku</td><td>30 – 100 zł</td></tr>
+        <tr><td>Instalacja czystego systemu Windows</td><td>50 zł</td></tr>
+        <tr><td>Inne usługi</td><td>Wycena indywidualna</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pricing-table-wrap" id="tab-monitoring">
+    <table>
+      <thead><tr><th>Usługa</th><th>Cena</th></tr></thead>
+      <tbody>
+        <tr><td>Wykonanie projektu</td><td><span class="free-badge">GRATIS</span></td></tr>
+      </tbody>
+    </table>
+    <div class="monitoring-note">
+      💬 Wycenę dostosowujemy do Twoich potrzeb, uwzględniając specyfikę budynku i rozmieszczenie kamer. Skontaktuj się z nami, aby umówić spotkanie i otrzymać spersonalizowaną ofertę.
+    </div>
+  </div>
+  <p class="section-sub-1">* Wszystkie ceny mają charakter orientacyjny i mogą ulec zmianie w zależności od zakresu prac oraz stopnia skomplikowania zlecenia.</p>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Skontaktuj się z nami</h2>
+  <p class="section-sub">Odpowiemy jak najszybciej. Możesz też zadzwonić lub napisać bezpośrednio.</p>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-item-label">Telefon</div>
+          <div class="contact-item-value"><a href="tel:502138081">502 138 081</a></div>
         </div>
-        <script>
-            function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-nav');
-            menu.classList.toggle('open');
-            }
-        </script>
-    </header>
-    <section id="glowna">
-        <div class="tlo">
-            <img id="obraz1" src="images/1.jpg" alt="1">
-            <div class="overlaytla1">
-                <a href="#serwistyt1">SERWIS IT</a>
-                <a href="#monitoringtyt1">MONITORING</a>
-                <a href="#smarttyt1">INTELIGENTY DOM</a>
-            </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-item-label">E-mail</div>
+          <div class="contact-item-value"><a href="mailto:kacper.kaminski@compsecure.pl">kacper.kaminski@compsecure.pl</a></div>
         </div>
-
-        
-        <section id="glowna1container">
-            <div id="oferta">
-                <img id="zdj" src="images/windows_icon.png" alt="windows">
-                <p id="">Instalacja systemu</p>
-            </div>
-            <div id="oferta">
-                <img id="zdj" src="images/fan_icon.png" alt="czyszczenie">
-                <p id="">Kompleksowe czyszczenie</p>
-            </div>
-            <div id="oferta">
-                <img id="zdj" src="images/pc_icon.png" alt="ulepszanie pc">
-                <p id="">Modernizacja komputera</p>
-            </div>
-            <div id="oferta">
-                <img id="zdj" src="images/hdd_icon.png" alt="dane">
-                <p id="">Przenoszenie danych</p>
-            </div>
-            <div id="oferta">
-                <img id="zdj" src="images/web_icon.png" alt="web">
-                <p id="">Tworzenie witryn internetowych</p>
-            </div>
-            <div id="oferta">
-                <img id="zdj" src="images/cctv_icon.png" alt="monitoring">
-                <p id="">Monitoring</p>
-            </div>
-        </section>
-
-        <p id="serwistyt1"></p>
-        <div id="serwistyt">
-            <p id="tyt">Serwis Komputerowy</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-item-label">Godziny otwarcia</div>
+          <div class="contact-item-value">Poniedziałek – Piątek: 9:00 – 15:00</div>
         </div>
-        <section id="serwis">
-            <img id="laptop" src="images/laptop.jpg" alt="laptop">
-            <p id="overlayserwis">
-                Witajcie! Czy kiedykolwiek zdarzyło Ci się, że Twój komputer czy laptop odmówił posłuszeństwa w najmniej odpowiednim momencie?
-                Nie martw się - jesteśmy tutaj, by Ci pomóc! Jesteśmy Twoim zaufanym partnerem w dziedzinie serwisowania komputerów i laptopów,
-                 gotowymi zaoferować kompleksowe usługi, które przywrócą sprawną pracę Twoich urządzeń.</p>
-        </section>
-        <p id="monitoringtyt1"></p>
-        <div id="monitoringtyt">
-            <p id="tyt">Monitoring</p>
-        </div>
-        <section id="monitoring">
-            <img id="kamery" src="images/kamery.jpg" alt="monitoring">
-            <p id="overlaymonitoring">
-                Nasza firma oferuje kompleksowe rozwiązania monitoringu, które zapewniają Ci spokój i bezpieczeństwo.
-                Dzięki zaawansowanym technologiom i indywidualnemu podejściu, dostarczamy systemy monitoringu dostosowane do Twoich potrzeb.
-                Śledź swoje otoczenie w czasie rzeczywistym, otrzymuj powiadomienia o zdarzeniach i chron swoje mienie oraz bliskich.
-                Niezależnie od tego, czy potrzebujesz monitoringu w domu, biurze czy na zewnątrz, mamy rozwiązanie dla Ciebie.
-                Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach monitoringu i jak możemy zadbać o Twoje bezpieczeństwo.</p>
-        </section>
-        <p id="smarttyt1"></p>
-        <div id="smarttyt">
-            <p id="tyt">Smart Dom</p>
-        </div>
-        <section id="smart">
-            <img id="smartdom" src="images/smart.jpg" alt="smart home">
-            <p id="overlaysmart">
-                Czy kiedykolwiek zastanawiałeś się, jak technologia może uczynić Twoje codzienne życie łatwiejszym? Dzięki naszym innowacyjnym rozwiązaniom,
-                Twój dom stanie się inteligentnym środowiskiem, w którym wszystko działa zgodnie z Twoimi potrzebami. Sterowanie oświetleniem,
-                temperaturą czy systemem bezpieczeństwa stanie się proste jak nigdy dotąd. Nasze zaawansowane technologie sprawią,
-                że Twój dom będzie nie tylko bardziej komfortowy, ale również bezpieczny i energooszczędny.</p>
-        </section>  
-    </section>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/CompAndSecure/" target="_blank" class="social-btn">👍 Facebook</a>
+        <a href="https://www.instagram.com/comp.secure/" target="_blank" class="social-btn">📸 Instagram</a>
+      </div>
+    </div>
 
+<form class="form" action="https://formspree.io/f/xwvaovkk" method="POST">
 
+  <div class="form-row">
+    <div class="field">
+      <label>Imię i nazwisko *</label>
+      <input type="text" id="name" name="name" placeholder="Jan Kowalski" required />
+    </div>
 
+    <div class="field">
+      <label>Telefon lub e-mail *</label>
+      <input type="text" id="contactField" name="contact" placeholder="+48 500 000 000" required />
+    </div>
+  </div>
 
+  <div class="field">
+    <label>Rodzaj usługi</label>
+    <select id="device" name="service">
+      <option value="">Wybierz...</option>
+      <option>Serwis komputera</option>
+      <option>Serwis laptopa</option>
+      <option>Monitoring</option>
+      <option>Smart Dom</option>
+      <option>Inne</option>
+    </select>
+  </div>
 
+  <div class="field">
+    <label>Opis problemu lub zapytania *</label>
+    <textarea id="message" name="message" placeholder="Opisz krótko usterkę lub zapytanie..." required></textarea>
+  </div>
 
-    <footer>
-        <div class="footer1container">
-            <div id="footer11">
-                <p id="f1tyt">Informacje</p>
-                <ul>
-                    <li><a id="footer11ahref" href="regulamin.html">Regulamin</a></li>
-                    <li><a id="footer11ahref" href="polityka.html">Polityka Prywatności</a></li>
-                </ul>  
-            </div>
-            <div id="footer12">
-                <p id="f1tyt">Kontakt</p>
-                <ul>
-                    <li><p id="footer11p">tel. : 502 138 081</p></li>
-                    <li><p id="footer11p">E-mail : kacper.kaminski@compsecure.pl</p></li>
-                </ul>
-            </div>
-            <div id="footer13">
-                <p id="f1tyt">Godziny Otrwarcia</p>
-                <p >Poniedziałek - Piątek 9:00 - 15:00</p>
-            </div>
-        </div>
-        <div id="liniafooter"></div>
-        <div class="footer2container">
-            <div>
-                <a href="index.html"><img id="logofooter" src="images/logobiale.png" alt="logo"></a>
-            </div>
-            <div id="copyrightfooter">
-                <p>Copyright © 2024 CompSecure.pl</p>
-            </div>
-            <div id="socialfooter">
-                <a href="https://www.facebook.com/CompAndSecure/"><img id="fb" src="images/fb.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/comp.secure/"><img id="insta" src="images/insta.png" alt="Instagram"></a>
-            </div>
-        </div>
-    </footer>
+  <button class="form-submit" type="submit">
+    Wyślij wiadomość →
+  </button>
 
+  <p class="form-note">
+    * Pola wymagane. Dane chronione zgodnie z Polityką Prywatności.
+  </p>
 
+  <div class="form-success" id="formSuccess">
+    ✅ Dziękujemy! Odezwiemy się jak najszybciej.
+  </div>
 
+</form>
+  </div>
+</section>
 
-
-    <button id="backToTop" onclick="scrollToTop()"><img id="backtoup" src="images/backtoup.png" alt="backToTop"></button>
-    <script src="script.js"></script>
+<footer>
+  <div>© <span id="year"></span> CompSecure.pl · Wszelkie prawa zastrzeżone</div>
+  <div class="footer-links">
+    <a href="regulamin.html">Regulamin</a>
+    <a href="polityka.html">Polityka Prywatności</a>
+    <a href="https://www.facebook.com/CompAndSecure/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/comp.secure/" target="_blank">Instagram</a>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

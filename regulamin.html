@@ -1,56 +1,33 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
-    <link rel="icon" href="images/logobialemale.png">
-    <title>CompSecure</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CompSecure – Serwis Komputerowy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
-        <div id="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <nav id="menu1">
-            <ul>
-                <li>
-                    <a href="index.html">Strona główna</a>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn" href="cennik.html">Cennik</a>
-                    <div class="dropdown-content">
-                        <a href="cennik.html#cenniktytkomp1">Serwis Komputera</a>
-                        <a href="cennik.html#cenniktytlaptop1">Serwis Lapotpa</a>
-                        <a href="cennik.html#cenniktytmonitoring1">Monitoring</a>
-                    </div>
-                </li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="onas.html">O nas</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu">
-            <div id="mobile-hamburger" onclick="toggleMobileMenu()">&#9776;</div>
-            <nav id="mobile-nav">
-                <ul>
-                    <li><a href="index.html">Strona główna</a></li>
-                    <li id="li1"><a href="cennik.html">Cennik</a></li>
-                    <li id="li1"><a href="kontakt.html">Kontakt</a></li>
-                    <li id="li1"><a href="onas.html">O nas</a></li>
-                </ul>
-            </nav>
-        </div>
-        <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-nav');
-            menu.classList.toggle('open');
-        }
-        </script>
-    </header>
-    <section id="regulamin">
-        <p id="tytul">Regulamin Strony Firmowej CompSecure</p>
 
-        <p id="paragraf">§1 Postanowienia ogólne</p>
+<nav>
+  <a class="nav-logo" href="index.html"><span>Comp</span>Secure</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">O nas</a></li>
+    <li><a href="index.html#pricing">Cennik</a></li>
+    <li><a href="index.html#contact">Kontakt</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Przełącz tryb">🌙</button>
+    <a href="index.html#contact" class="nav-cta">Napisz do nas</a>
+  </div>
+</nav>
+
+<section id="about">
+  <div class="about-grid-regulamin">
+	<div></div>
+    <div class="about-text">
+      <h2 class="section-title">Regulamin Strony Firmowej CompSecure</h2> 
+		<p id="paragraf">§1 Postanowienia ogólne</p>
         <p id="numer">1. Niniejszy regulamin określa zasady korzystania ze strony internetowej <a href="https://compsecure.pl">www.compsecure.pl</a>, zwanej dalej “Stroną”.</p>
         <p id="numer">2. Właścicielem Strony oraz administratorem danych osobowych jest ​CompSecure z siedzibą w Mirocinie Górnym, NIP: 9252145607, REGON: 528731887.</p>
         <p id="paragraf">§2 Zakres usług</p>
@@ -61,48 +38,25 @@
         <p id="paragraf">§4 Prawa autorskie </p>
         <p id="numer">1. Wszystkie treści zamieszczone na Stronie są chronione prawem autorskim i należą do CompSecure lub zostały użyte za zgodą ich właścicieli.</p>
         <p id="paragraf">§5 Ochrona danych osobowych</p>
-        <p id="numer">1. Administratorem danych osobowych jest ​CompSecure. Dane osobowe przetwarzane są zgodnie z obowiązującymi przepisami, wtym z RODO.</p>
+        <p id="numer">1. Administratorem danych osobowych jest ​CompSecure. Dane osobowe przetwarzane są zgodnie z obowiązującymi przepisami, w tym z RODO.</p>
         <p id="numer">2. Szczegółowe informacje dotyczące przetwarzania danych osobowych znajdują się w Polityce Prywatności.</p>
         <p id="paragraf">§6 Postanowienia końcowe</p>
         <p id="numer">1. Właściciel Strony zastrzega sobie prawo do wprowadzania zmian w Regulaminie.</p>
-        <p id="numer">2. Wszelkie spory wynikające z korzystania ze Strony będą rozstrzygane przez właściwe sądy polskie.</p>
-    </section>
-    <footer>
-        <div class="footer1container">
-            <div id="footer11">
-                <p id="f1tyt">Informacje</p>
-                <ul>
-                    <li><a id="footer11ahref" href="regulamin.html">Regulamin</a></li>
-                    <li><a id="footer11ahref" href="polityka.html">Polityka Prywatności</a></li>
-                </ul>  
-            </div>
-            <div id="footer12">
-                <p id="f1tyt">Kontakt</p>
-                <ul>
-                    <li><p id="footer11ahref">tel. : 502 138 081</p></li>
-                    <li><p id="footer11ahref">E-mail : kacper.kaminski@compsecure.pl</p></li>
-                </ul>
-            </div>
-            <div id="footer13">
-                <p id="f1tyt">Godziny Otrwarcia</p>
-                <p >Poniedziałek - Piątek 9:00 - 15:00</p>
-            </div>
-        </div>
-        <div id="liniafooter"></div>
-        <div class="footer2container">
-            <div>
-                <a href="index.html"><img id="logofooter" src="images/logobiale.png" alt="logo"></a>
-            </div>
-            <div id="copyrightfooter">
-                <p>Copyright © 2024 CompSecure.pl</p>
-            </div>
-            <div id="socialfooter">
-                <a href="https://www.facebook.com/CompAndSecure/"><img id="fb" src="images/fb.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/comp.secure/"><img id="insta" src="images/insta.png" alt="Instagram"></a>
-            </div>
-        </div>
-    </footer>
-    <button id="backToTop" onclick="scrollToTop()"><img id="backtoup" src="images/backtoup.png" alt="backToTop"></button>
-    <script src="script.js"></script>
+        <p id="numer">2. Wszelkie spory wynikające z korzystania ze Strony będą rozstrzygane przez właściwe sądy polskie.</p>	  
+    </div>
+	<div></div>
+  </div>
+</section>
+
+<footer>
+  <div>© <span id="year"></span> CompSecure.pl · Wszelkie prawa zastrzeżone</div>
+  <div class="footer-links">
+    <a href="https://compsecure.pl/regulamin.html">Regulamin</a>
+    <a href="https://compsecure.pl/polityka.html">Polityka Prywatności</a>
+    <a href="https://www.facebook.com/CompAndSecure/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/comp.secure/" target="_blank">Instagram</a>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
