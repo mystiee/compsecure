@@ -217,7 +217,7 @@
     }
 
     .section-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
       font-weight: 800; letter-spacing: -0.02em;
       line-height: 1.1; margin-bottom: 16px;
