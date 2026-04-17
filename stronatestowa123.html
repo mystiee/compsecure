@@ -571,36 +571,50 @@
       </div>
     </div>
 
-    <div class="form">
-      <div class="form-row">
-        <div class="field">
-          <label>Imię i nazwisko *</label>
-          <input type="text" id="name" placeholder="Jan Kowalski" />
-        </div>
-        <div class="field">
-          <label>Telefon lub e-mail *</label>
-          <input type="text" id="contactField" placeholder="+48 500 000 000" />
-        </div>
-      </div>
-      <div class="field">
-        <label>Rodzaj usługi</label>
-        <select id="device">
-          <option value="">Wybierz...</option>
-          <option>Serwis komputera</option>
-          <option>Serwis laptopa</option>
-          <option>Monitoring</option>
-          <option>Smart Dom</option>
-          <option>Inne</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Opis problemu lub zapytania *</label>
-        <textarea id="message" placeholder="Opisz krótko usterkę lub zapytanie..."></textarea>
-      </div>
-      <button class="form-submit" onclick="submitForm()">Wyślij wiadomość →</button>
-      <p class="form-note">* Pola wymagane. Dane chronione zgodnie z Polityką Prywatności.</p>
-      <div class="form-success" id="formSuccess">✅ Dziękujemy! Odezwiemy się jak najszybciej.</div>
+<form class="form" action="https://formspree.io/f/xwvaovkk" method="POST">
+
+  <div class="form-row">
+    <div class="field">
+      <label>Imię i nazwisko *</label>
+      <input type="text" id="name" name="name" placeholder="Jan Kowalski" required />
     </div>
+
+    <div class="field">
+      <label>Telefon lub e-mail *</label>
+      <input type="text" id="contactField" name="contact" placeholder="+48 500 000 000" required />
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Rodzaj usługi</label>
+    <select id="device" name="service">
+      <option value="">Wybierz...</option>
+      <option>Serwis komputera</option>
+      <option>Serwis laptopa</option>
+      <option>Monitoring</option>
+      <option>Smart Dom</option>
+      <option>Inne</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Opis problemu lub zapytania *</label>
+    <textarea id="message" name="message" placeholder="Opisz krótko usterkę lub zapytanie..." required></textarea>
+  </div>
+
+  <button class="form-submit" type="submit">
+    Wyślij wiadomość →
+  </button>
+
+  <p class="form-note">
+    * Pola wymagane. Dane chronione zgodnie z Polityką Prywatności.
+  </p>
+
+  <div class="form-success" id="formSuccess">
+    ✅ Dziękujemy! Odezwiemy się jak najszybciej.
+  </div>
+
+</form>
   </div>
 </section>
 
