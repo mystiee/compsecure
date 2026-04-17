@@ -619,7 +619,7 @@
 </section>
 
 <footer>
-  <div>© 2024 <strong>CompSecure.pl</strong> · Wszelkie prawa zastrzeżone</div>
+  <div>© <span id="year"></span> CompSecure.pl · Wszelkie prawa zastrzeżone</div>
   <div class="footer-links">
     <a href="https://compsecure.pl/regulamin.html" target="_blank">Regulamin</a>
     <a href="https://compsecure.pl/polityka.html" target="_blank">Polityka Prywatności</a>
@@ -629,6 +629,7 @@
 </footer>
 
 <script>
+	document.getElementById("year").textContent = new Date().getFullYear();
   function toggleTheme() {
     const html = document.documentElement;
     const btn = document.getElementById('themeBtn');
